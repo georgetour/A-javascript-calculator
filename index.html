@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Final Exam l1141-c1-u3</title>
+
+    <link href="stylesheet.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="border">
+        <h3>Javascript Calculator by George Tourtsinakis</h3>
+
+    <p>
+      <div class="margin"><input id="number1" type="text"></div>
+    </p>
+
+    <div id="buttons">
+        <div id="calculations" >
+        <div>
+          <button id="add" >+</button>
+          <button id="substract">-</button>
+          <button id="multiply">*</button>
+          <button id="divide">/</button>
+          <button id="sqrt">&#8730;</button>
+
+        </div>
+
+        <div>
+           <button id="abs">abs</button>
+           <button id="power">x<sup>y</sup></button>
+           <button id="sin">sin</button>
+           <button id="cos">cos</button>
+           <button id="tan">tan</button>
+         </div>
+        </div>
+
+    </div>
+    <p>
+        <div class="margin"><input id="number2" type="text"></div>
+    </p>
+    <h4 id="result">
+        <div >Result:</div>
+    </h4>
+
+</div>
+
+<script type="text/javascript">
+    var number1 ;
+    var number2 ;
+
+    var result;
+
+    function add() {
+        result = parseFloat(number1) +parseFloat(number2);
+        document.getElementById("result").innerHTML =("Result: ") + result;
+    }
+
+    function substract(){
+        result = parseFloat(number1) -parseFloat(number2);
+        document.getElementById("result").innerHTML =("Result: ") + result;
+    }
+
+    function multiply(){
+        result = parseFloat(number1) *parseFloat(number2);
+        document.getElementById("result").innerHTML =("Result: ") + result;
+    }
+
+    function divide(){
+        result = parseFloat(number1) / parseFloat(number2);
+        document.getElementById("result").innerHTML =("Result: ") + result;
+    }
+
+    function sqrt (){
+        result =Math.sqrt(parseFloat(number1)) ;
+        document.getElementById("result").innerHTML =("Result of first column only: ") + result;
+    }
+
+    function abs (){
+        result =Math.abs(parseFloat(number1)) ;
+       document.getElementById("result").innerHTML =("Result of first column only: ") + result;
+    }
+
+    function power (){
+        result =Math.pow( (parseFloat(number1)) , (parseFloat(number2))) ;
+        document.getElementById("result").innerHTML =("Result: ") + result;
+    }
+
+    function sin (){
+        result =Math.sin(parseInt(number1)) ;
+        document.getElementById("result").innerHTML =("Result of first column only: ") + result;
+    }
+
+    function cos(){
+        result =Math.cos(parseInt(number1)) ;
+        document.getElementById("result").innerHTML =("Result of first column only: ") + result;
+    }
+    function tan(){
+        result =Math.tan(parseInt(number1)) ;
+        document.getElementById("result").innerHTML =("Result of first column only: ") + result;
+    }
+
+    document.getElementById("add").onclick = function () {
+       number1 = document.getElementById("number1").value;
+       number2 = document.getElementById("number2").value;
+       add();
+    }
+
+    document.getElementById("substract").onclick = function () {
+        number1 = document.getElementById("number1").value;
+        number2 = document.getElementById("number2").value;
+        substract();
+    }
+
+    document.getElementById("multiply").onclick = function () {
+        number1 = document.getElementById("number1").value;
+        number2 = document.getElementById("number2").value;
+        multiply();
+    }
+
+    document.getElementById("divide").onclick = function () {
+        number1 = document.getElementById("number1").value;
+        number2 = document.getElementById("number2").value;
+        divide();
+    }
+
+
+    document.getElementById("sqrt").onclick = function () {
+        number1 = document.getElementById("number1").value;
+        sqrt();
+    }
+
+    document.getElementById("abs").onclick = function () {
+        number1 = document.getElementById("number1").value;
+        abs();
+    }
+
+    document.getElementById("power").onclick = function () {
+        number1 = document.getElementById("number1").value;
+        number2 = document.getElementById("number2").value;
+        power();
+    }
+
+    document.getElementById("sin").onclick = function () {
+        number1 = document.getElementById("number1").value;
+        sin();
+
+    }
+
+    document.getElementById("cos").onclick = function () {
+        number1 = document.getElementById("number1").value;
+        cos();
+    }
+    document.getElementById("tan").onclick = function () {
+        number1 = document.getElementById("number1").value;
+        tan();
+    }
+
+</script>
+
+</body>
+</html>
